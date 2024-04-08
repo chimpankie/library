@@ -27,6 +27,7 @@ function createLibrary(){
 
     //create book card and append to book shelf
     let book = document.createElement("div");
+    book.className = "book";
     shelf.appendChild(book);
 
     // Create DIV elements to sit on book card 

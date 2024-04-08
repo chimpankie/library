@@ -1,11 +1,25 @@
 #bookGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    margin: 100px;
+    background-color: rgb(87, 72, 53,0.4);
+    gap: 15px;
 
 }
 
-#book {
+.book {
     display:grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    background-color: darkgreen;
+    border: 5px solid blanchedalmond;
+}
+
+.book p {
+    margin: 0px;
+}
+
+html {
+    background: url('images/background-image.jpeg') no-repeat center center fixed;
+    background-size: cover;
 }
