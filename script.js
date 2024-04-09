@@ -43,9 +43,9 @@ function createLibrary(){
     
     title.textContent = objectBook.title; 
     author.textContent = objectBook.author;
-    year.textContent = objectBook.year; 
-    rating.textContent = objectBook.rating;
-    read.textContent = objectBook.read; 
+    year.textContent = "Published: " + objectBook.year; 
+    rating.textContent = "Rating: " + objectBook.rating;
+    read.textContent = "Finished? " + objectBook.read; 
    
     //append new DOM elements to book card
 
@@ -61,3 +61,17 @@ function createLibrary(){
     
     }
 };
+
+//Add book functionality
+
+let addBook = document.querySelector('#addBook');
+let dialog = document.querySelector('dialog');
+let closeButton = document.querySelector('#closeButton');
+
+addBook.addEventListener('click', () => {
+    dialog.showModal();
+}); 
+
+closeButton.addEventListener('click', () => {
+    dialog.close();
+});

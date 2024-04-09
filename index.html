@@ -7,11 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="background">   
-        <div id="bookGrid">
-
-        </div>
+    <div id="buttons">
+        <button id="addBook">Add Book</button>
+        <button id="anotherButton">Something</button>
     </div>
+    <div id="bookGrid">
+
+
+    </div>
+
+    <dialog> 
+        <P>Sir, please let me know what book you would like added to your library...</P>
+        <label for="title">Title</label>
+        <input type="text" id="title" placeholder="Ye Olde Compendium">
+        <label for="author">Author</label>
+        <input type="text" id="author" placeholder="William Faustus"> 
+        <button id="submitBook">Add this book!</button>
+        <button id="closeButton">Nevermind...</button>
+    </dialog>
+
     <script src="script.js"></script>
 </body>
 </html>
