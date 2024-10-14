@@ -67,6 +67,7 @@ function createLibrary(){
 let addBook = document.querySelector('#addBook');
 let dialog = document.querySelector('dialog');
 let closeButton = document.querySelector('#closeButton');
+let submitBook = document.querySelector('#submitBook');
 
 addBook.addEventListener('click', () => {
     dialog.showModal();
@@ -75,3 +76,11 @@ addBook.addEventListener('click', () => {
 closeButton.addEventListener('click', () => {
     dialog.close();
 });
+
+submitBook.addEventListener('click', () => {
+    let title = document.querySelector('#title');
+    let author = document.querySelector('#author');
+    console.log(title.value + author.value);
+    addBookToLibrary(title.value, author.value);
+    dialog.close();
+})

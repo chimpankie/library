@@ -18,11 +18,14 @@
     display:flex;
     flex-direction: column;
     background-color: darkgreen;
+    background-image: url(images/dark-leather.png);
     border: 5px solid blanchedalmond;
     padding: 5px;
     color: gold;
     align-items: center;
-    padding-bottom: 35px;    
+    padding-bottom: 35px; 
+    border-top-left-radius: 4%;   
+    border-bottom-left-radius: 4%;
 }
 
 .book p {
