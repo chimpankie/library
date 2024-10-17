@@ -8,12 +8,21 @@
 
 }
 
+dialog {
+    max-width: 70%;
+}
+
 #buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
+#formItems {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 .book {
     display:flex;
     flex-direction: column;

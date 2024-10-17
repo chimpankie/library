@@ -18,18 +18,32 @@
 
     <dialog> 
         <P>Sir, please let me know what book you would like added to your library...</P>
-        <label for="title">Title</label>
-        <input type="text" id="title" placeholder="Ye Olde Compendium">
-        <label for="author">Author</label>
-        <input type="text" id="author" placeholder="William Faustus"> 
-        <label for="year">Year</label>
-        <input type="number" id="year" placeholder="1066">
-        <label for="rating">Rating (1-5)</label>
-        <input type="number" id="rating" placeholder="5">
-        <label for="read">Read?</label>
-        <input type="text" id="read" placeholder="Y/N?">
-        <button id="submitBook">Add this book!k</button>
-        <button id="closeButton">Nevermind...</button>
+        <div id="formItems">
+            <div class="formItem">
+                <label for="title">Title</label>
+                <input type="text" id="title" placeholder="Ye Olde Compendium">
+            </div>
+            <div>
+                <label for="author">Author</label>
+                <input type="text" id="author" placeholder="William Faustus">
+            </div>
+            <div class="formItem">
+                <label for="year">Year</label>
+                <input type="number" id="year" placeholder="1066">
+            </div>
+            <div class="formItem">
+                <label for="rating">Rating (1-5)</label>
+                <input type="number" id="rating" placeholder="5">
+            </div>
+            <div class="formItem">
+                <label for="read">Read?</label>
+                <input type="text" id="read" placeholder="Y/N?">
+            </div>
+            <div class="formItem">
+                <button id="submitBook">Add this book!k</button>
+                <button id="closeButton">Nevermind...</button>
+            </div>
+        </div>
     </dialog>
 
     <script src="script.js"></script>
