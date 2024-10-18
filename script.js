@@ -18,49 +18,51 @@ function addBookToLibrary(title, author, year, rating, read){
 }
 
 function createLibrary(){
+    shelf.innerHTML = '';
     for(let i = 0; i<myLibrary.length; i++){
-    console.log(myLibrary[i]);
+        console.log(myLibrary[i]);
 
-    //assign object to variable within loop
+        //assign object to variable within loop
 
-    let objectBook = myLibrary[i];
+        let objectBook = myLibrary[i];
 
-    //create book card and append to book shelf
-    let book = document.createElement("div");
-    book.className = "book";
-    shelf.appendChild(book);
+        //create book card and append to book shelf
+        let book = document.createElement("div");
+        book.className = "book";
+        shelf.appendChild(book);
 
-    // Create DIV elements to sit on book card 
+        // Create DIV elements to sit on book card 
 
-    let title = document.createElement("h2");
-    let author = document.createElement("h3");
-    let year = document.createElement("p");
-    let rating = document.createElement("p");
-    let read = document.createElement('p');
+        let title = document.createElement("h2");
+        let author = document.createElement("h3");
+        let year = document.createElement("p");
+        let rating = document.createElement("p");
+        let read = document.createElement('p');
 
-    //assign object proprties to DOM elements
-    console.log(objectBook.title);
+        //assign object proprties to DOM elements
+        console.log(objectBook.title);
+        
+        title.textContent = objectBook.title; 
+        author.textContent = objectBook.author;
+        year.textContent = "Published: " + objectBook.year; 
+        rating.textContent = "Rating: " + objectBook.rating;
+        read.textContent = "Finished? " + objectBook.read; 
     
-    title.textContent = objectBook.title; 
-    author.textContent = objectBook.author;
-    year.textContent = "Published: " + objectBook.year; 
-    rating.textContent = "Rating: " + objectBook.rating;
-    read.textContent = "Finished? " + objectBook.read; 
-   
-    //append new DOM elements to book card
+        //append new DOM elements to book card
 
-    book.appendChild(title);
-    book.appendChild(author);
-    book.appendChild(year);
-    book.appendChild(rating);
-    book.appendChild(read); 
-    
+        book.appendChild(title);
+        book.appendChild(author);
+        book.appendChild(year);
+        book.appendChild(rating);
+        book.appendChild(read); 
+        
 
 
 
     
     }
 };
+
 
 //Add book functionality
 
@@ -80,7 +82,12 @@ closeButton.addEventListener('click', () => {
 submitBook.addEventListener('click', () => {
     let title = document.querySelector('#title');
     let author = document.querySelector('#author');
-    console.log(title.value + author.value);
+    let inputs = document.querySelectorAll('input');
+    console.log(inputs)
     addBookToLibrary(title.value, author.value);
     dialog.close();
+    inputs.forEach(input => {
+        input.value = ''
+    })
+    createLibrary();
 })
